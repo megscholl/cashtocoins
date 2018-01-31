@@ -2,7 +2,30 @@
 
 const dollarAmount = 2.42;
 
+const piggyBank = {
+    pennies: 0,
+    nickels: 0,
+    dimes: 0,
+    quarters: 0
+}
 
+// Your magic code here
+
+let quarters = .25;
+let dimes = .1;
+let nickels = .05;
+let pennies = .01;
+
+piggyBank.pennies = dollarAmount / pennies;
+piggyBank.nickels = dollarAmount / nickels;
+piggyBank.dimes = dollarAmount / dimes;
+piggyBank.quarters = dollarAmount / quarters;
+
+for(let i = 0; i < dollarAmount; i++){
+
+
+    console.log(piggyBank)
+}
 
 
 
