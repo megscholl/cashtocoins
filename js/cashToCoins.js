@@ -1,71 +1,11 @@
-
-
 const dollarAmount = 2.42;
+let piggyBank = {}
 
-const piggyBank = {
-    pennies: 0,
-    nickels: 0,
-    dimes: 0,
-    quarters: 0
-}
+let pennies = dollarAmount * 100;
+let smallCoins = pennies % 25;
+piggyBank.quarters = Math.floor(pennies / 25);
+piggyBank.dimes = Math.floor((smallCoins) / 10);
+piggyBank.nickel = Math.floor(((smallCoins) % 10) / 5);
+piggyBank.penny = Math.floor(((smallCoins) % 10) % 5);
 
-// Your magic code here
-
-let quarters = .25;
-let dimes = .1;
-let nickels = .05;
-let pennies = .01;
-
-piggyBank.pennies = dollarAmount / pennies;
-piggyBank.nickels = dollarAmount / nickels;
-piggyBank.dimes = dollarAmount / dimes;
-piggyBank.quarters = dollarAmount / quarters;
-
-for(let i = 0; i < dollarAmount; i++){
-
-
-    console.log(piggyBank)
-}
-
-
-
-
-
-
-
-
-// const piggyBank = {
-//     pennies: .32,
-//     dimes: .5,
-//     nickels: .35,
-//     quarters: 1.25
-// };
-
-
-// let coinConvert = {
-//     penny: .01,
-//     dime: .1,
-//     nickel: .05,
-//     quarter: .25
-// }
-
-// console.log("Inside my piggy bank is:", piggyBank);
-
-
-// var dollarPenny = (piggyBank.pennies /coinConvert.penny);
-// var dollarDime = (piggyBank.dimes/ coinConvert.dime );
-// var dollarNickel = Math.round(piggyBank.nickels / coinConvert.nickel);
-// var dollarQuarter = (piggyBank.quarters / coinConvert.quarter);
-
-// var cashToCoin = {
-//     pennies: dollarPenny,
-//     dimes: dollarDime,
-//     nickels: dollarNickel,
-//     quarters: dollarQuarter
-// }
-
-// // Your magic code here
-
-// console.log("Inside $2.42, there are " + dollarPenny + " pennies, " +  dollarDime + " dimes, " + dollarNickel + " nickels, and " + dollarQuarter + " quarters.");
-
-// console.log(cashToCoin);
+console.log(piggyBank);
